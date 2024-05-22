@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Rasai_web.Models.MenuItem
+
+<h1>Create/Edit Items</h1>
+
+<form>
+    <label>Id</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Id" />
+    <label class="mt-4">Item</label>
+    <input class="form-control" type="text" placeholder="Kottu" asp-for="Name" />
+    <label class="mt-4">Description</label>
+    <input class="form-control" type="text" placeholder="Add a description" asp-for="Description" />
+    <label class="mt-4">Price</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Price" step="0.01"/>
+    <label class="mt-4">Image Url</label>
+    <input class="form-control" type="url" placeholder="https://image.link.jpg" asp-for="ImageUrl " />
+
+    <button class="btn btn-primary mt-4" type="submit">Submit</button>
+</form>

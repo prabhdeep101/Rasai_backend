@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/Admin.css" rel="stylesheet" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="sidebar">
+            <ul>
+                <li><a asp-controller="Home" asp-action="Admin">Admin</a></li>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="CreateEditMenu">Create Menu Item</a></li>
+                <li><a asp-controller="Home" asp-action="Menu">Menu</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <div class="admin-heading">
+                <h1>Dashboard</h1>
+                <div class="createMenuButton">
+                    <a asp-controller="Home" asp-action="CreateEditMenu" class="btn btn-primary">Create Item</a>
+                </div>
+            </div>
+            <div class="bookings">
+                <!-- Bookings will be displayed here -->
+                @* Add your booking display logic here *@
+            </div>
+        </main>
+    </div>
+
+    
+</body>
+</html>

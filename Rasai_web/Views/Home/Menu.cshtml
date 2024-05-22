@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Menu Page";
+}
+<head>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+
+<div class="row">
+    <div class="column side">
+        <div class="header">
+            <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="~/lib/Logo.png" alt="Go to home page"></a>
+            <a asp-controller="Home" asp-action="About">About</a>
+            <a asp-controller="Home" asp-action="Menu">Menu</a>
+            <a asp-controller="Home" asp-action="Booking">Booking</a>
+        </div>
+    </div>
+</div>
+
+    <div class="whitebg">
+        <p>testing menu</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+
+
+
+<footer>
+    <br>
+    <div class="footer">
+        <a asp-controller="Home" asp-action="About">About</a>
+        <p1><b>info@rasi.co.nz</b></p1><br>
+        <a asp-controller="Home" asp-action="Menu">Menu</a>
+        <p1><b>0210 452 333</b></p1><br>
+        <a asp-controller="Home" asp-action="Booking">Booking</a><br><br>
+    </div>
+</footer>

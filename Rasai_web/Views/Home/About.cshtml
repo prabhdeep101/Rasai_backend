@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "About Page";
+}
+<head>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+
+<div class="row">
+    <div class="column side">
+        <div class="header">
+            <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="~/lib/Logo.png" alt="Go to home page"></a>
+            <a asp-controller="Home" asp-action="About">About</a>
+            <a asp-controller="Home" asp-action="Menu">Menu</a>
+            <a asp-controller="Home" asp-action="Booking">Booking</a>
+        </div>
+    </div>
+</div>
+
+    <div class="whitebg">
+        <div class="row">
+            <div class="column1 side">
+                <br><img class="food" src="images/food1.png">
+            </div>
+
+            <div class="column1 side">
+                <h2>What is Rasai?</h2>
+                <b>
+                    <p>
+                        <span class="green">Rasai,</span> in Sinhalese means "tasty."
+                        It reflects the authenticity,
+                        the richness, and the vibrancy of Sri Lanka’s diverse cuisine is
+                        traditions.  Complex and vibrant, Sri Lankan cuisine is well known
+                        for its combination of herbs and spices and is centered around many
+                        varieties of rice. Coconut milk, oil and pulp also play a significant
+                        role in the cuisine, as is preserved fish. A hub in the historic oceanic Silk Road,
+                        contact with foreign traders brought new food items and cultural influences
+                        in addition to the local traditions of the country’s ethnic groups, all of which have helped
+                        shape the cuisine of Sri Lanka.
+                    </p>
+                </b>
+            </div>
+        </div>
+    </div>
+
+
+
+<footer>
+    <br>
+    <div class="footer">
+        <a asp-controller="Home" asp-action="About">About</a>
+        <p1><b>info@rasi.co.nz</b></p1><br>
+        <a asp-controller="Home" asp-action="Menu">Menu</a>
+        <p1><b>0210 452 333</b></p1><br>
+        <a asp-controller="Home" asp-action="Booking">Booking</a><br><br>
+    </div>
+</footer>

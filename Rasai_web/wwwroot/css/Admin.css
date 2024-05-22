@@ -1,0 +1,62 @@
+﻿body {
+    font-family: Arial, sans-serif;
+}
+
+.admin-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+            .sidebar ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+                .sidebar ul li a:hover {
+                    text-decoration: underline;
+                }
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.admin-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .admin-heading h1 {
+        margin: 0;
+    }
+
+.createMenuButton .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+    .createMenuButton .btn:hover {
+        background-color: #0056b3;
+    }
