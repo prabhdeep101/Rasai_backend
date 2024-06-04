@@ -1,381 +1,466 @@
-html {
-    height: 100%;
+/* General styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
     width: 100%;
 }
 
-* {
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.logo-link img {
+    height: 40px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
     background-color: black;
-    font-family: trebutchet MS;
     color: white;
-}
-/* Styling for the logo in the navigation bar */
-.logo-link {
-    margin-left: 7%;
-}
-
-.logo {
-    margin: 25px;
-}
-/* Prevent hover effect on the logo */
-.logo-link:hover .logo, body-links-home {
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
 }
 
-/* Navigation Bar about, menu, booking*/
-.header {
-    text-align: left;
-    padding: 20px 10px;
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
-    background-color: black;
-}
-
-    .header a:not(.logo-link, body-links-home) {
-        display: inline-block;
-        overflow: hidden;
-        text-decoration: none;
-        font-family: 'Franklin Gothic Medium';
-        font-size: 25px;
-        padding: 10px;
-        margin-bottom: 6%;
-        margin-left: 11%;
-        border-radius: 5px;
+    .footer ul {
+        list-style: none;
+        color: white;
+        padding: 0;
     }
 
-    .header a:hover:not(.logo-link, body-links-home) {
-        /*hover changed to light blue*/
-        color: lightgreen;
-        overflow: hidden;
-        text-decoration: none;
-        font-family: 'Franklin Gothic Medium';
+    .footer .footer-links {
+        margin-right: 50px;
     }
 
-/*Header*/
-/*columns and rows*/
-.column {
+    .footer .footer-contacts {
+        margin-left: 50px;
+    }
+
+    .footer a,
+    .footer p {
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', sans-serif;
+        font-size: 20px;
+        color: white;
+        margin: 0;
+    }
+
+/* Index page specific styles */
+.fishBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.fish {
+    width: 50%;
+    margin-left: 48.5%;
+    height: auto;
+    border: 2px solid black;
+}
+
+.TextFish {
+    position: absolute;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    top: 20%;
+    left: 8%;
+    right: 60%;
+    font-size: 25px;
+}
+
+.p1 {
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Trebuchet MS';
+}
+
+h4 {
+    color: green;
+    font-family: 'Trebuchet MS';
+}
+
+.ImgHome {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .fishBox {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .TextFish {
+        position: static;
+        width: 100%;
+        font-size: 15px;
+        padding: 10%;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .fish {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1310px) and (min-width: 801px) {
+    .fishBox {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .TextFish {
+        position: static;
+        width: 100%;
+        font-size: 20px;
+        padding: 30px;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .fish {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+/* About page specific styles */
+.column1 {
     float: left;
-    padding: 10px;
+    width: 50%;
 }
-    /* 4 columns - logo and nav bar */
-    .column.side {
-        width: 80%;
+
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.food {
+    width: 85%;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: black;
+    font-family: Arial;
+    margin-top: 0;
+    margin-bottom: 7px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.green {
+    color: #1FC333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.p1 {
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+    padding-right: 30px;
+    margin-top: 0;
+    margin-bottom: 13px;
+    padding-left: 30px;
+}
+
+.p2 {
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 0;
+}
+
+.abouthead {
+    color: black;
+    font-family: Arial;
+    margin-top: 0;
+    padding-left: 30px;
+    margin-bottom: 7px;
+}
+
+.Aboutme {
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1210px) {
+    .column1 {
+        width: 100%;
+        padding: 0;
     }
-/* Clear floats after the columns */
+
+    .food {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Booking page specific styles */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: lightgrey;
+    border-radius: 3px;
+    resize: vertical;
+}
+
+.top-text {
+    padding: 2%;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+    padding-left: 10%;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.col-25 {
+    float: left;
+    width: 20%;
+    font-family: 'Franklin Gothic Medium';
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 40%;
+    font-family: 'Franklin Gothic Medium';
+    margin-top: 6px;
+}
+
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-/* Responsive layout - makes the two columns stack on        top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-        width: 100%;
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 80%;
+        margin-top: 0;
     }
 }
-/*Footer*/
-.footer a {
-    background-color: black;
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 20px;
-    margin-left: 35%;
-    margin-right: 10%;
-}
 
-.p1 {
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 20px;
-}
-
-/*Body*/
-.whitebg {
-    background-color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-/*This section is where all the differences from all pages will be*/
-/*Home/Index page*/
-.body-links-home {
-    text-align: center;
-    background-color: white;
-}
-
-    .body-links-home img {
-        width: 100%;
-        background-color: white;
-        padding: 5px;
-    }
-
-.column1 {
-    float: left;
-    padding: 0%;
-    margin: 0%;
-    background-color: white;
-}
-    /* 2 columns - logo and nav bar */
-    .column1.side {
-        color: black;
-        background-color: white;
-        width: 50%;
-    }
-
-.food {
-    width: 90%;
-    background-color: white;
-}
-
-p {
-    color: black;
-    background-color: white;
-    padding-right: 20px;
-    float: left;
-    font-size: 20px;
-}
-
-/* Style the word "Rasai" to be green */
-.green {
-    color: #51AF2F;
-    background-color: white;
-    float: left;
-}
-
-h2 {
-    background-color: white;
-    color: black;
-    float: left;
+/* Login page specific styles */
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
+/*Menu Page*/
+
+
+form {
+    border: 2px solid black;
+    width: 60%;
+    max-width: 400px;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    background-color: white;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-}
-
-html {
-    height: 100%;
+input[type=text],
+input[type=password] {
     width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    button:hover {
+        background-color: green;
+    }
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.container {
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+    text-align: right;
+    width: 100%;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    span.psw a {
+        text-decoration: none;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
+
+/* MENU PAGE STYLING! */
 
 * {
-    background-color: black;
-    font-family: trebutchet MS;
-    color: white;
-}
-/* Styling for the logo in the navigation bar */
-.logo-link {
-    margin-left: 7%;
+    font-family: 'Trebuchet MS';
 }
 
-.logo {
-    margin: 25px;
+.top-text {
+    padding: 2%;
 }
-/* Prevent hover effect on the logo */
-.logo-link:hover .logo, body-links-home {
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
-}
-
-/* Navigation Bar about, menu, booking*/
-.header {
-    text-align: left;
-    padding: 20px 10px;
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
-    background-color: black;
-}
-
-    .header a:not(.logo-link, body-links-home) {
-        display: inline-block;
-        overflow: hidden;
-        text-decoration: none;
-        font-family: 'Franklin Gothic Medium';
-        font-size: 25px;
-        padding: 10px;
-        margin-bottom: 6%;
-        margin-left: 11%;
-        border-radius: 5px;
-    }
-
-    .header a:hover:not(.logo-link, body-links-home) {
-        /*hover changed to light blue*/
-        color: lightgreen;
-        overflow: hidden;
-        text-decoration: none;
-        font-family: 'Franklin Gothic Medium';
-    }
-
-/*Header*/
-/*columns and rows*/
-.column {
-    float: left;
-    padding: 10px;
-}
-    /* 4 columns - logo and nav bar */
-    .column.side {
-        width: 80%;
-    }
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/* Responsive layout - makes the two columns stack on        top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-        width: 100%;
-    }
-}
-/*Footer*/
-.footer a {
-    background-color: black;
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 20px;
-    margin-left: 35%;
-    margin-right: 10%;
-}
-
-.p1 {
-    overflow: hidden;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 20px;
-}
-
-/*Body*/
-.whitebg {
-    background-color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-/*This section is where all the differences from all pages will be*/
-/*Home/Index page*/
-.body-links-home {
-    text-align: center;
-    background-color: white;
-}
-
-    .body-links-home img {
-        width: 100%;
-        background-color: white;
-        padding: 5px;
-    }
-
-.column1 {
-    float: left;
-    padding: 0%;
-    margin: 0%;
-    background-color: white;
-}
-    /* 2 columns - logo and nav bar */
-    .column1.side {
-        color: black;
-        background-color: white;
-        width: 50%;
-    }
 
 .food {
-    width: 90%;
-    background-color: white;
+    width: 350px; /* Fixed width for all images */
+    height: auto;
+    margin: 1px;
 }
 
-p {
-    color: black;
-    background-color: white;
-    padding-right: 20px;
-    float: left;
-    font-size: 20px;
+/* Flexbox container for image and text */
+.content {
+    display: flex;
+    align-items: center;
+    padding: 2%;
 }
 
-/* Style the word "Rasai" to be green */
-.green {
-    color: #51AF2F;
-    background-color: white;
-    float: left;
+/* Adjust text content area */
+.text-content {
+    max-width: 70%;
+    margin-left: 30px;
 }
 
-h2 {
-    background-color: white;
-    color: black;
-    float: left;
-}
-
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
+/* Responsive layout - adjustes the size of the image
+and text*/
+@media screen and (max-width: 650px) {
+    .text-content {
+        max-width: 70%;
+        margin-left: 20px;
+        font-size: 10px;
     }
+
+    .food {
+        width: 150px; /* Fixed width for all images */
+        height: auto;
+        margin: 1px;
+    }
+
+    .top-text {
+        padding: 2%;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 651px) {
+    .text-content {
+        max-width: 60%;
+        margin-left: 20px;
+        font-size: 11px;
+    }
+
+    .food {
+        width: 200px; /* Fixed width for all images */
+        height: auto;
+        margin: 1px;
+    }
+
+    .top-text {
+        padding: 2%;
+        font-size: 11px;
+    }
+}

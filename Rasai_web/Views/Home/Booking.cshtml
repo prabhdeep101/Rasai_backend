@@ -3,34 +3,136 @@
 }
 <head>
     <link href="~/css/site.css" rel="stylesheet" />
+    <script src="/js/site.js"></script>
 </head>
 
-<div class="row">
-    <div class="column side">
-        <div class="header">
-            <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="~/lib/Logo.png" alt="Go to home page"></a>
+    <div class="navbar">
+        <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="/lib/Logo.png" alt="Go to home page"></a>
+        <div class="NavHead">
             <a asp-controller="Home" asp-action="About">About</a>
             <a asp-controller="Home" asp-action="Menu">Menu</a>
             <a asp-controller="Home" asp-action="Booking">Booking</a>
+
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0);" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <br><br><br><br>
+            <div class="dropdown-content">
+                <div class="header">
+                    <div class="row">
+                        <div class="column">
+                            <a asp-controller="Home" asp-action="About">About</a>
+                            <a asp-controller="Home" asp-action="Menu">Menu</a>
+                            <a asp-controller="Home" asp-action="Booking">Booking</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+        
+        <p class="top-text">Please fill out our Event Enquiry form below so we can determine the best 
+          way for us to get you information about our catering services. You can also call us 
+          directly or email us and we will get right back to you. We look forward to hearing from you.</p>
 
-    <div class="whitebg">
-        <p> testing booking</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    </div>
-
-
+        <div class="container">
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="Fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Fname" name="FirstName" placeholder="Your first name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Lname" name="LastName" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Email" name="Email" placeholder="Your Email..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Phone">Phone</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Phone" name="Phone" placeholder="Your phone number..">
+              </div>
+            </div>
+            <br><br>
+            <div class="row">
+              <div class="col-25">
+                <label for="EDate">Event Date</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="EDate" name="EventDate" placeholder="Date of event.." required min="{{today}}">
+              </div>
+            </div>
+                <div class="row">
+              <div class="col-25">
+                <label for="ETime">Event Time</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="ETime" name="EventTime" placeholder="Time of event..">
+              </div>
+            </div>
+                <div class="row">
+              <div class="col-25">
+                <label for="NumAdults">Number of Adults</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="NumAdults" name="NumberOfAdults" placeholder="Number of Adults..">
+              </div>
+            </div>
+                    <div class="row">
+              <div class="col-25">
+                <label for="NumChildren">Number of Children</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="NumChildren" name="NumberOfChildren" placeholder="Number of Children..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="SPRequests">Event Info/Special Requests</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Send">
+            </div>
+          </form>
+        </div>
 
 <footer>
-    <br>
     <div class="footer">
-        <a asp-controller="Home" asp-action="About">About</a>
-        <p1><b>info@rasi.co.nz</b></p1><br>
-        <a asp-controller="Home" asp-action="Menu">Menu</a>
-        <p1><b>0210 452 333</b></p1><br>
-        <a asp-controller="Home" asp-action="Booking">Booking</a><br><br>
+        <div class="footer-links">
+            <ul>
+                <a asp-controller="Home" asp-action="About">About</a>
+                <a asp-controller="Home" asp-action="Menu">Menu</a>
+                <a asp-controller="Home" asp-action="Booking">Booking</a>
+            </ul>
+        </div>
+        <div class="footer-contacts" id="contacts">
+            <ul>
+                <li><a>Contacts</a></li>
+                <li><p><b>info@rasi.co.nz</b></p></li>
+                <li><p><b>0210 452 333</b></p></li>
+            </ul>
+        </div>
     </div>
 </footer>

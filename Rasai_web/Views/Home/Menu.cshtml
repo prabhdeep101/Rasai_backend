@@ -2,35 +2,174 @@
     ViewData["Title"] = "Menu Page";
 }
 <head>
-    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <script src="/js/site.js"></script>
 </head>
 
-<div class="row">
-    <div class="column side">
-        <div class="header">
-            <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="~/lib/Logo.png" alt="Go to home page"></a>
-            <a asp-controller="Home" asp-action="About">About</a>
-            <a asp-controller="Home" asp-action="Menu">Menu</a>
-            <a asp-controller="Home" asp-action="Booking">Booking</a>
+
+
+<div class="navbar">
+    <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="/lib/Logo.png" alt="Go to home page"></a>
+    <div class="NavHead">
+        <a asp-controller="Home" asp-action="About">About</a>
+        <a asp-controller="Home" asp-action="Menu">Menu</a>
+        <a asp-controller="Home" asp-action="Booking">Booking</a>
+
+    </div>
+    <div class="dropdown">
+        <a href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <br><br><br><br>
+        <div class="dropdown-content">
+            <div class="header">
+                <div class="row">
+                    <div class="column">
+                        <a asp-controller="Home" asp-action="About">About</a>
+                        <a asp-controller="Home" asp-action="Menu">Menu</a>
+                        <a asp-controller="Home" asp-action="Booking">Booking</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-    <div class="whitebg">
-        <p>testing menu</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p class="top-text">
+        Experience a traditional Sri Lankan meal catered by Rasai and
+        taste the complexity and the richness of Sri Lankan culture.
+        Rasia believes in the authentic preparation and freshness of
+        Sri Lankan food, and source many of the ingredients from farmer’s
+        markets, our own vegetable garden, specifically stores and local butchers.
+    </p>
 
+    <div class="content">
+        <img class="food" src="/lib/1Ambulthiyal.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Abulthiyal (fish ambul thiyal)</h3>
+            <p>
+                Ambulthiyal, also known as malu ambulthiyal is a must-try Sri Lankan
+                sour fish curry. Made with Goraka (dried garcinia) and black pepper,
+                not only gives the fish ambulthiyal (sour fish) curry a unique taste but
+                is also a method of preserving fish without refrigeration or freezing.
+            </p>
+        </div>
     </div>
-
-
+    <div class="content">
+        <img class="food" src="/lib/2Kukul-Mas-Curry.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Kukul mas curry (chicken curry)</h3>
+            <p>
+                Kukul mas is a Colombo-style tradition Sri Lankan chicken curry.
+                This creamy and lightly spiced curry is typically made with diced chicken breast,
+                onions, ginger, garlic, turmeric, garam masala, chilli powder, coconut milk,
+                tomatoes, oil, and salt.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/3Parippu.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Parippu (dhal curry)</h3>
+            <p>
+                Parippu Curry is basically a Moong Lentil Curry, tempered in a typical South Indian style.
+                It has a good dose of coconut, just like any other dish in this part of our country,
+                and other spices.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/4Polos.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Polos (green Jackfruit curry)</h3>
+            <p>
+                Polos curry or polos ambula is a traditional Sri Lankan baby jackfruit curry.
+                This jackfruit curry is made using jackfruit which has not matured or ripped,
+                at this stage of the jackfruit, the fruit is often referred to as baby jackfruit
+                or green jackfruit.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/5Wambatu-Moju.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Wambatu moju (eggplant/brinjals pickle)</h3>
+            <p>
+                Wambatu moju aka brinjal moju are fried eggplant strips, shallots, and
+                green chillies mixed with mustard vinegar to pickle them, giving it a combo of sweet, sour, and heat.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/6Gotu-Kola-Sambol.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Gotu kola sambol (pennywort salad)</h3>
+            <p>
+                A green salad with chopped Gotu kola and freshly scraped coconut gives
+                you one of the healthiest salads in Sri Lankan cuisine.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/7Kottu.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Kottu (also kottu roti)</h3>
+            <p>
+                Kottu translates from Sinhalese as chopped, and this hugely popular Sri Lankan street
+                food consists of chopped up roti (a type of flatbread), stir-fried with chicken, vegetables and egg.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/8Lamprais.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Lamprais</h3>
+            <p>
+                Lamprais is a Sri Lankan meal, a marriage of multiple elements – samba rice,
+                brinjal and meat curries, seeni sambol, fried ash plantain and blachan – steamed
+                and packed in a banana leaf. Lamprais recipes have typically been a burgher family
+                tradition. It is a meal with a strong, yet gradually wavering legacy.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/9Hoppers.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Hoppers (appa or appam)</h3>
+            <p>
+                An appa or appam is a type of thin pancake originating from South India and Sri Lanka,
+                It is made with fermented rice batter and coconut milk, traditionally cooked in an
+                appachatti, a deep pan similar in shape to a wok.
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <img class="food" src="/lib/10Pol-Sambol.png" alt="Food"></a>
+        <div class="text-content">
+            <h3>Pol Sambol (coconut relish)</h3>
+            <p>
+                It is a coconut relish, consisting of fresh grated coconut, shallots, dried whole chillies or
+                chili powder, lime juice, and salt.
+            </p>
+        </div>
+    </div>
 
 <footer>
-    <br>
     <div class="footer">
-        <a asp-controller="Home" asp-action="About">About</a>
-        <p1><b>info@rasi.co.nz</b></p1><br>
-        <a asp-controller="Home" asp-action="Menu">Menu</a>
-        <p1><b>0210 452 333</b></p1><br>
-        <a asp-controller="Home" asp-action="Booking">Booking</a><br><br>
+        <div class="footer-links">
+            <ul>
+                <a asp-controller="Home" asp-action="About">About</a>
+                <a asp-controller="Home" asp-action="Menu">Menu</a>
+                <a asp-controller="Home" asp-action="Booking">Booking</a>
+            </ul>
+        </div>
+        <div class="footer-contacts" id="contacts">
+            <ul>
+                <li><a>Contacts</a></li>
+                <li><p><b>info@rasi.co.nz</b></p></li>
+                <li><p><b>0210 452 333</b></p></li>
+            </ul>
+        </div>
     </div>
-</footer>
+
+

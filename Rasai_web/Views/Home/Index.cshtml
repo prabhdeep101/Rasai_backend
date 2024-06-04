@@ -9,36 +9,75 @@
 
 <head>
     <link href="~/css/site.css" rel="stylesheet" />
+    <script src="/js/site.js"></script>
 </head>
 
-<div class="row">
-    <div class="column side">
-        <div class="header">
-            <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="~/lib/Logo.png" alt="Go to home page"></a>
-            <a asp-controller="Home" asp-action="About">About</a>
-            <a asp-controller="Home" asp-action="Menu">Menu</a>
-            <a asp-controller="Home" asp-action="Booking">Booking</a>
+
+
+
+<div class="navbar">
+    <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="/lib/Logo.png" alt="Go to home page"></a>
+    <div class="NavHead">
+        <a asp-controller="Home" asp-action="About">About</a>
+        <a asp-controller="Home" asp-action="Menu">Menu</a>
+        <a asp-controller="Home" asp-action="Booking">Booking</a>
+        
+    </div>
+    <div class="dropdown">
+        <a href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <br><br><br><br>
+        <div class="dropdown-content">
+            <div class="header">
+                <div class="row">
+                    <div class="column">
+                        <a asp-controller="Home" asp-action="About">About</a>
+                        <a asp-controller="Home" asp-action="Menu">Menu</a>
+                        <a asp-controller="Home" asp-action="Booking">Booking</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<br>
+<div class="fishBox">
+    <img class="fish" src="/lib/7Kottu.png" alt="Fish"></a>
 
-    <h1>Online</h1>
-    <div class="whitebg">
-        <a href="About.html" class="body-links-home"><img src="~/lib/About.png" alt="Go to About page"></a>
-        <a href="Menu.html" class="body-links-home"><img src="~/lib/Menu.png" alt="Go to Menu page"></a>
-        <a href="Booking.html" class="body-links-home"><img src="~/lib/Booking.png" alt="Go to Booking page"></a>
-    </div>
-
-
-
-
-    <footer>
+    <div class="TextFish">
+        <h2>RASAI</h2>
         <br>
-        <div class="footer">
-        <a asp-controller="Home" asp-action="About">About</a>
-            <p1><b>info@rasi.co.nz</b></p1><br>
-        <a asp-controller="Home" asp-action="Menu">Menu</a>
-            <p1><b>0210 452 333</b></p1><br>
-        <a asp-controller="Home" asp-action="Booking">Booking</a><br><br>
+        <b><p1>Fabulous Sri Lankan food</p1></b>
+        <br><br><br>
+        <h4>Visit our menu!</h4>
+    </div>
+</div>
+<br>
+
+
+
+<a asp-controller="Home" asp-action="About"><img class="ImgHome" src="//lib/About.png" alt="About"></a>
+<a asp-controller="Home" asp-action="Menu"><img class="ImgHome" src="/lib/Menu.png" alt="Menu"></a>
+<a asp-controller="Home" asp-action="Booking"><img class="ImgHome" src="/lib/Booking.png" alt="Booking"></a>
+<br>
+
+<footer>
+    <div class="footer">
+        <div class="footer-links">
+            <ul>
+                <a asp-controller="Home" asp-action="About">About</a>
+                <a asp-controller="Home" asp-action="Menu">Menu</a>
+                <a asp-controller="Home" asp-action="Booking">Booking</a>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-contacts" id="contacts">
+            <ul>
+                <li><a>Contacts</a></li>
+                <li><p><b>info@rasi.co.nz</b></p></li>
+                <li><p><b>0210 452 333</b></p></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+

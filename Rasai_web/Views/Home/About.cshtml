@@ -3,54 +3,102 @@
 }
 <head>
     <link href="~/css/site.css" rel="stylesheet" />
+    <script src="/js/site.js"></script>
 </head>
 
-<div class="row">
-    <div class="column side">
-        <div class="header">
-            <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="~/lib/Logo.png" alt="Go to home page"></a>
-            <a asp-controller="Home" asp-action="About">About</a>
-            <a asp-controller="Home" asp-action="Menu">Menu</a>
-            <a asp-controller="Home" asp-action="Booking">Booking</a>
+
+<div class="navbar">
+    <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="/lib/Logo.png" alt="Go to home page"></a>
+    <div class="NavHead">
+        <a asp-controller="Home" asp-action="About">About</a>
+        <a asp-controller="Home" asp-action="Menu">Menu</a>
+        <a asp-controller="Home" asp-action="Booking">Booking</a>
+
+    </div>
+    <div class="dropdown">
+        <a href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <br><br><br><br>
+        <div class="dropdown-content">
+            <div class="header">
+                <div class="row">
+                    <div class="column">
+                        <a asp-controller="Home" asp-action="About">About</a>
+                        <a asp-controller="Home" asp-action="Menu">Menu</a>
+                        <a asp-controller="Home" asp-action="Booking">Booking</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-    <div class="whitebg">
-        <div class="row">
-            <div class="column1 side">
-                <br><img class="food" src="images/food1.png">
-            </div>
-
-            <div class="column1 side">
-                <h2>What is Rasai?</h2>
-                <b>
-                    <p>
-                        <span class="green">Rasai,</span> in Sinhalese means "tasty."
-                        It reflects the authenticity,
-                        the richness, and the vibrancy of Sri Lanka’s diverse cuisine is
-                        traditions.  Complex and vibrant, Sri Lankan cuisine is well known
-                        for its combination of herbs and spices and is centered around many
-                        varieties of rice. Coconut milk, oil and pulp also play a significant
-                        role in the cuisine, as is preserved fish. A hub in the historic oceanic Silk Road,
-                        contact with foreign traders brought new food items and cultural influences
-                        in addition to the local traditions of the country’s ethnic groups, all of which have helped
-                        shape the cuisine of Sri Lanka.
-                    </p>
-                </b>
-            </div>
-        </div>
+<div class="row1">
+    <div class="column1 side">
+        <img class="food" src="/lib/food1.png" alt="Sri lankan food"></a>
     </div>
+    <div class="column1 side">
+        <h2>What is Rasai?</h2>
+        <p class="p1">
+            <span class="green">Rasai</span> In Sinhalese means “tasty.” It reflects the authenticity,
+            the richness, and the vibrancy of Sri Lanka’s diverse culinary traditions. Complex and vibrant,
+            Sri Lankan cuisine is well known for its combination of herbs and spices and is centred around
+            many varieties of rice.<br><br>
+            Coconut milk, oil and pulp also play a significant role in the cuisine,
+            as is preserved fish. A hub in the historical oceanic Silk Road, contact with foreign traders
+            brought new food items and cultural influences in addition to the local traditions of the country’s
+            ethnic groups, all of which have helped shaped the cuisine of Sri Lanka..
+        </p>
+    </div>
+</div>
+<p class="p2">
+    I have a passion for preparing authentic and tradition Sri Lankan meals,
+    through trialling different combination of spices to bring out the best flavours of meat,
+    seafood and vegetables. I am inspired to share my Sri Lankan heritage and culture through
+    authentic dishes from my homeland.
+</p>
 
+<div class="row1">
+    <div class="column1 side">
+        <h2 class="abouthead">About Me</h2>
+        <p class="Aboutme">
+            My name is Dhammika, and I was born in Colombo,
+            Sri Lanka, and having lived in Papua New Guinea for most of my schooling years,
+            I migrated to New Zealand in 1999.<br><br>
+            I grew up where food was the centre of almost everything,
+            from family gathering to special occasions. Yearly celebrations such as the Sinhala and Tamil
+            New Year and Christmas means the preparation of authentic cuisine – that reflects the Sri Lankan
+            tradition and made with intention and care.<br><br>
+            The passion to share the authentic cuisine of Sri Lanka has
+            inspired me to open the doors to Rasai.<br><br>
+            I welcome you to my table!
+        </p>
+    </div>
+    <div class="column1 side">
+        <img class="food" src="/lib/Dhammika.png" alt="Dhammika"></a>
+        <br><br><br>
+    </div>
+</div>
 
 
 <footer>
-    <br>
     <div class="footer">
-        <a asp-controller="Home" asp-action="About">About</a>
-        <p1><b>info@rasi.co.nz</b></p1><br>
-        <a asp-controller="Home" asp-action="Menu">Menu</a>
-        <p1><b>0210 452 333</b></p1><br>
-        <a asp-controller="Home" asp-action="Booking">Booking</a><br><br>
+        <div class="footer-links">
+            <ul>
+                <a asp-controller="Home" asp-action="About">About</a>
+                <a asp-controller="Home" asp-action="Menu">Menu</a>
+                <a asp-controller="Home" asp-action="Booking">Booking</a>
+            </ul>
+        </div>
+        <div class="footer-contacts" id="contacts">
+            <ul>
+                <li><a>Contacts</a></li>
+                <li><p><b>info@rasi.co.nz</b></p></li>
+                <li><p><b>0210 452 333</b></p></li>
+            </ul>
+        </div>
     </div>
+
 </footer>
+
