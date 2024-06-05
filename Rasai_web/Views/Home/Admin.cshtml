@@ -1,9 +1,10 @@
-﻿@{
+﻿@model IEnumerable<Rasai_web.Models.MenuItem>
+
+@{
     ViewData["Title"] = "Admin Page";
 }
 
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,20 @@
     <title>@ViewData["Title"]</title>
 </head>
 <style>
+    
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f5f5f5;
         font-size: 16px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height = 100%;
     }
 
     .navbar {
@@ -58,6 +67,7 @@
         justify-content: space-between;
         align-items: center;
         background-color: black;
+        align-self: flex-end;
     }
 
     .footer-links {
@@ -78,7 +88,49 @@
         color: white;
         margin: 0 2em;
     }
+
+
+    .viewMenuButton .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+        .viewMenuButton .btn:hover {
+            background-color: #0056b3;
+        }
+
+    
+
+    .bookings {
+        width: 60%;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 3rem;
+    }
+
+    .booking-entry {
+        margin-bottom: 20px;
+    }
+
+        .booking-entry h4 {
+            margin-top: 0;
+        }
+
+    hr {
+        border: none;
+        border-top: 1px solid #ddd;
+    }
+
 </style>
+
+<div class="wrapper">
 
 
 <div class="navbar">
@@ -91,31 +143,49 @@
         <a asp-controller="Home" asp-action="About">About</a>
         <a asp-controller="MenuItems" asp-action="Index">Menu</a>
         <a asp-controller="Home" asp-action="Booking">Booking</a>
-        <a asp-controller="Home" asp-action="Index">Login</a>
+        <a asp-controller="Home" asp-action="Admin">Login</a>
 
     </div>
 </div>
 
-<body>
+
     <div class="admin-container">
         <nav class="sidebar">
             <ul>
                 <li><a asp-controller="Home" asp-action="Admin">Admin</a></li>
                 <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a asp-controller="Home" asp-action="CreateEditMenu">Create Menu Item</a></li>
+                <li><a asp-controller="MenuItems" asp-action="Create">Create Menu Item</a></li>
+                <li><a asp-controller="MenuItems" asp-action="index">View Menu Items</a></li>
                 <li><a asp-controller="Home" asp-action="Menu">Menu</a></li>
             </ul>
         </nav>
         <main class="main-content">
             <div class="admin-heading">
-                <h1>Dashboard</h1>
+                <h1>Admin Dashboard</h1>
                 <div class="createMenuButton">
-                    <a asp-controller="Home" asp-action="CreateEditMenu" class="btn btn-primary">Create Item</a>
+                    <a asp-controller="MenuItems" asp-action="Create" class="btn btn-primary">Create Item</a>
+                </div>
+                <div class="viewMenuButton">
+                    <a asp-controller="MenuItems" asp-action="Index" class="btn btn-primary">View Menu Items</a>
                 </div>
             </div>
             <div class="bookings">
+                <h3>Bookings will be displayed here.</h3>
                 <!-- Bookings will be displayed here -->
-                @* Add your booking display logic here *@
+                <!-- Example booking entries -->
+                <div class="booking-entry">
+                    <h4>Booking 1</h4>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Phone:</strong> +1234567890</p>
+                    <p><strong>Email:</strong> john.doe@example.com</p>
+                    <p><strong>Event Date:</strong> 2024-06-10</p>
+                    <p><strong>Event Time:</strong> 19:00</p>
+                    <p><strong>Number of Adults:</strong> 4</p>
+                    <p><strong>Number of Children:</strong> 2</p>
+                    <p><strong>Special Requests:</strong> Vegetarian options required.</p>
+                </div>
+                <hr>
+                
             </div>
         </main>
     </div>
@@ -140,6 +210,5 @@
     </footer>
 
 
-    
-</body>
-</html>
+</div>
+

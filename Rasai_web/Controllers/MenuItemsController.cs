@@ -4,6 +4,9 @@ using Rasai_web.Models;
 
 namespace Rasai_web.Controllers
 {
+
+
+
     public class MenuItemsController : Controller
     {
         private readonly MenuContext _context;
@@ -15,7 +18,12 @@ namespace Rasai_web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.MenuItems.ToListAsync());
+            var menuItems = await _context.MenuItems.ToListAsync();
+            if (menuItems == null)
+            {
+                return NotFound();
+            }
+            return View(menuItems);
         }
 
         public IActionResult Create()
