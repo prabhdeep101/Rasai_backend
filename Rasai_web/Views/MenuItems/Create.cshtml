@@ -4,10 +4,149 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-size: 16px;
+    }
 
-<h4>MenuItem</h4>
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 0.5rem 5rem;
+        /*Added padding to the navbar */
+    }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: text-decoration 0.3s ease;
+        }
+
+            .navbar a:hover {
+                background-color: white;
+                color: black;
+            }
+
+    .navLinks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .navLinks a {
+            padding: 0 5rem;
+        }
+
+    .logo img {
+        height: 3.2em;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footer-contacts {
+        padding: 0 5em;
+    }
+
+    .footer a,
+    .footer p {
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', sans-serif;
+        font-size: 20px;
+        color: white;
+        margin: 0 2em;
+    }
+
+    .createBody {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-top: 3rem;
+        height: 100vh;
+        width: 100%;
+    }
+
+    /* Adjust the width of the form fields */
+    .form-control {
+        width: 100%; /* Set the width to 100% */
+        padding: 10px; /* Add padding to the form fields */
+        font-size: 16px; /* Increase the font size */
+        border: 1px solid #ced4da; /* Add border */
+        border-radius: 4px; /* Add border radius */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+
+    /* Style the submit button */
+    .btn-primary {
+        padding: 10px 20px; /* Add padding to the button */
+        font-size: 16px; /* Increase the font size */
+        background-color: #007bff; /* Set background color */
+        color: #fff; /* Set text color */
+        border: none; /* Remove border */
+        border-radius: 4px; /* Add border radius */
+        cursor: pointer; /* Add cursor pointer */
+    }
+
+    /* Style the form labels */
+    .control-label {
+        font-size: 16px; /* Increase the font size */
+        font-weight: bold; /* Make labels bold */
+    }
+
+    /* Style the validation error messages */
+    .text-danger {
+        color: #dc3545; /* Set error message color */
+        font-size: 14px; /* Set error message font size */
+    }
+
+    .col-md-4 {
+ 
+        width: 400px; /* Set a specific width for the form container */
+        margin: 0 auto; /* Center the form horizontally */
+    }
+    .form-group{
+        margin-top: 1rem;
+    }
+
+
+</style>
+
+<div class="navbar">
+    <div class="logo-box">
+        <a asp-controller="Home" asp-action="Index" class="logo">
+            <img src="/lib/Logo.png" alt="Go to home page">
+        </a>
+    </div>
+    <div class="navLinks">
+        <a asp-controller="Home" asp-action="About">About</a>
+        <a asp-controller="MenuItems" asp-action="Index">Menu</a>
+        <a asp-controller="Home" asp-action="Booking">Booking</a>
+        <a asp-controller="Home" asp-action="Booking">Booking</a>
+
+    </div>
+</div>
+
+<h1 style="text-align: center;">Create menu item</h1>
+
 <hr />
+
+<div class="createBody">
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -38,10 +177,28 @@
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
+<div>
+    <a asp-action="Index" asp-controller="MenuItems">Back to List</a>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footer-links">
+            <ul>
+                <a asp-controller="Home" asp-action="About">About</a>
+                <a asp-controller="Home" asp-action="Menu">Menu</a>
+                <a asp-controller="Home" asp-action="Booking">Booking</a>
+            </ul>
+        </div>
+        <div class="footer-contacts" id="contacts">
+            <ul>
+                <li><a>Contacts</a></li>
+                <li><p><b>info@rasai.co.nz</b></p></li>
+                <li><p><b>0210 452 333</b></p></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -6,16 +6,98 @@
     <script src="/js/site.js"></script>
 </head>
 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-size: 16px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 0.5rem 5rem;
+        /*Added padding to the navbar */
+    }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: text-decoration 0.3s ease;
+        }
+
+            .navbar a:hover {
+                background-color: white;
+                color: black;
+            }
+
+    .navLinks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .navLinks a {
+            padding: 0 5rem;
+        }
+
+    .logo img {
+        height: 3.2em;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footer-contacts {
+        padding: 0 5em;
+    }
+
+    .footer a,
+    .footer p {
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', sans-serif;
+        font-size: 20px;
+        color: white;
+        margin: 0 2em;
+    }
+
+    
+
+</style>
+
+
+
 
 <div class="navbar">
-    <a asp-controller="Home" asp-action="Index" class="logo-link"><img class="logo" src="/lib/Logo.png" alt="Go to home page"></a>
-    <div class="NavHead">
+    <div class="logo-box">
+        <a asp-controller="Home" asp-action="Index" class="logo">
+            <img src="/lib/Logo.png" alt="Go to home page">
+        </a>
+    </div>
+    <div class="navLinks">
         <a asp-controller="Home" asp-action="About">About</a>
         <a asp-controller="Home" asp-action="Menu">Menu</a>
         <a asp-controller="Home" asp-action="Booking">Booking</a>
+        <a asp-controller="Home" asp-action="Index">Login</a>
 
     </div>
-    <div class="dropdown">
+</div>
+
+    @* <div class="dropdown">
         <a href="javascript:void(0);" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -32,9 +114,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> *@
 
 <div class="row1">
+
     <div class="column1 side">
         <img class="food" src="/lib/food1.png" alt="Sri lankan food"></a>
     </div>
@@ -58,7 +141,7 @@
     seafood and vegetables. I am inspired to share my Sri Lankan heritage and culture through
     authentic dishes from my homeland.
 </p>
-
+<div class="row2">
 <div class="row1">
     <div class="column1 side">
         <h2 class="abouthead">About Me</h2>
@@ -80,7 +163,7 @@
         <br><br><br>
     </div>
 </div>
-
+</div>
 
 <footer>
     <div class="footer">
@@ -94,11 +177,10 @@
         <div class="footer-contacts" id="contacts">
             <ul>
                 <li><a>Contacts</a></li>
-                <li><p><b>info@rasi.co.nz</b></p></li>
+                <li><p><b>info@rasai.co.nz</b></p></li>
                 <li><p><b>0210 452 333</b></p></li>
             </ul>
         </div>
     </div>
-
 </footer>
 
