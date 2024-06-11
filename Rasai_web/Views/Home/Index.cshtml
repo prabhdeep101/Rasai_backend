@@ -12,19 +12,25 @@
     <script src="/js/site.js"></script>
 </head>
 <style>
-    body {
+  
+    html, body{
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        height: 100%;
+        width: 100%;
         background-color: #f2f2f2;
         font-size: 16px;
+        
+
     }
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: black;
-        padding: 0.5rem 5rem;
+        padding: 0.35em 5em;
+        width: 100%;
         /*Added padding to the navbar */
     }
 
@@ -43,6 +49,7 @@
     .navLinks{
         display: flex;
         justify-content: space-between;
+        padding-right: 2em;
         
 
     }
@@ -86,6 +93,10 @@
         justify-content: space-between;
         align-items: center;
         background-color: black;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
     }
     .footer-links{
         display:flex;
@@ -105,7 +116,96 @@
         color: white;
         margin: 0 2em;
     }
+    @@media screen and (max-width: 800px) {
+       
+    .fishBox {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
+    .TextFish {
+        position: static;
+        width: 100%;
+        font-size: 15px;
+        padding: 10%;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .fish {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+    @@media screen and (max-width: 1310px) and (min-width: 801px) {
+    .fishBox {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .TextFish {
+        position: static;
+        width: 100%;
+        font-size: 20px;
+        padding: 30px;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .fish {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+
+
+    @@media screen and (max-width: 250px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Added padding */
+    }
+
+    .navLinks a {
+        padding: 0 0.5rem; /* Added padding */
+        font-size: 1rem; /* Added font size */
+    }
+
+    .TextFish {
+        font-size: 12px; /* Added font size */
+        padding: 5%; /* Added padding */
+    }
+
+    .footer a,
+    .footer p {
+        font-size: 16px; /* Added font size */
+        margin: 0 0.5em; /* Added margin */
+    }
+}
+
+    @@media screen and (min-width: 1300px) {
+    .fishBox {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .TextFish {
+        position: static;
+        width: 100%;
+        font-size: 20px;
+        padding: 30px;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .fish {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+}
 </style>
 
 
@@ -145,6 +245,7 @@
     </div> *@
 
 <br>
+
 <div class="fishBox">
     <div class="right">
     <img class="fish" src="/lib/7Kottu.png" alt="Fish"></a>

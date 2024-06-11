@@ -4,68 +4,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    font-size: 4rem;
 }
-
-/*navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;*/ /* Added padding to the navbar */
-/*}
-
-    .navbar a {
-        color: #f2f2f2;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-.logo img {
-    height: auto;
-}*/
-
-
-/*.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-    background-color: black;
-    color: white;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: 0;
-}*/
-/*
-    .footer ul {
-        list-style: none;
-        color: white;
-        padding: 0;
-    }
-
-    .footer .footer-links {
-        margin-right: 50px;
-    }
-
-    .footer .footer-contacts {
-        margin-left: 50px;
-    }
-
-    .footer a,
-    .footer p {
-        text-decoration: none;
-        font-family: 'Franklin Gothic Medium', sans-serif;
-        font-size: 20px;
-        color: white;
-        margin: 0;
-    }*/
-
 
 
 .p1 {
@@ -113,6 +53,52 @@ h4 {
 }
 
 @media screen and (max-width: 1310px) and (min-width: 801px) {
+    .fishBox {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .TextFish {
+        position: static;
+        width: 100%;
+        font-size: 20px;
+        padding: 30px;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .fish {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 250px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Added padding */
+    }
+
+    .navLinks a {
+        padding: 0 0.5rem; /* Added padding */
+        font-size: 1rem; /* Added font size */
+    }
+
+    .TextFish {
+        font-size: 12px; /* Added font size */
+        padding: 5%; /* Added padding */
+    }
+
+    .footer a,
+    .footer p {
+        font-size: 16px; /* Added font size */
+        margin: 0 0.5em; /* Added margin */
+    }
+}
+
+@media screen and (min-width: 1300px) {
     .fishBox {
         flex-direction: column-reverse;
         align-items: center;
@@ -290,6 +276,18 @@ input[type=submit] {
 
 form{
     width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+    *{
+        font-size: 2rem;
+    }
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 80%;
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 600px) {
