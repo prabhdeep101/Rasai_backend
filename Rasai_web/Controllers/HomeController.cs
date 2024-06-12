@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Rasai_web.Models;
 using System.Diagnostics;
 
@@ -6,10 +7,12 @@ namespace Rasai_web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly MenuContext _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(MenuContext context, ILogger<HomeController> logger)
         {
+            _context = context;
             _logger = logger;
         }
 
@@ -18,9 +21,14 @@ namespace Rasai_web.Controllers
             return View();
         }
 
-        public IActionResult Menu()
+        public async Task<IActionResult> Menu()
         {
-            return View();
+            var menuItems = await _context.MenuItems.ToListAsync();
+            if (menuItems == null)
+            {
+                return NotFound();
+            }
+            return View(menuItems);
         }
 
         public IActionResult Booking()
@@ -42,6 +50,7 @@ namespace Rasai_web.Controllers
         {
             return View();
         }
+
         public IActionResult Privacy()
         {
             return View();

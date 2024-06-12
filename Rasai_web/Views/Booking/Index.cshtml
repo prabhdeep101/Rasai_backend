@@ -1,0 +1,90 @@
+﻿@model Booking
+
+<h2>Booking Form</h2>
+
+<form asp-action="Index" method="post">
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="FirstName"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="FirstName" placeholder="Your first name.." />
+            <span asp-validation-for="FirstName"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="LastName"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="LastName" placeholder="Your last name.." />
+            <span asp-validation-for="LastName"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="Email"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="Email" placeholder="Your email.." />
+            <span asp-validation-for="Email"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="Phone"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="Phone" placeholder="Your phone number.." />
+            <span asp-validation-for="Phone"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="EventDate"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="EventDate" placeholder="Date of event.." />
+            <span asp-validation-for="EventDate"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="EventTime"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="EventTime" placeholder="Time of event.." />
+            <span asp-validation-for="EventTime"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="NumberOfAdults"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="NumberOfAdults" placeholder="Number of adults.." />
+            <span asp-validation-for="NumberOfAdults"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="NumberOfChildren"></label>
+        </div>
+        <div class="col-75">
+            <input asp-for="NumberOfChildren" placeholder="Number of children.." />
+            <span asp-validation-for="NumberOfChildren"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label asp-for="SpecialRequests"></label>
+        </div>
+        <div class="col-75">
+            <textarea asp-for="SpecialRequests" placeholder="Event info/special requests.." style="height:200px"></textarea>
+            <span asp-validation-for="SpecialRequests"></span>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Send">
+    </div>
+</form>
