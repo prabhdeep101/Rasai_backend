@@ -24,9 +24,9 @@ namespace Rasai_web.Controllers
         public async Task<IActionResult> Menu()
         {
             var menuItems = await _context.MenuItems.ToListAsync();
-            if (menuItems == null)
+            if (menuItems.Count() == null)
             {
-                return NotFound();
+                ViewBag.Message = "No menu items found.";
             }
             return View(menuItems);
         }
